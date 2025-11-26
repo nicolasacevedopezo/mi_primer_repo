@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Grind | Sip. Relax. Recharge.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-cream shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-green" href="#">☕ THE DAILY GRIND</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-green text-white ms-lg-3 px-4" href="#contact">Reservar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section d-flex align-items-center text-white text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <h1 class="display-3 fw-bold mb-3">Sip. Relax. Recharge.</h1>
+                    <p class="lead mb-4">El mejor café artesanal en un ambiente diseñado para tu inspiración.</p>
+                    <a href="#menu" class="btn btn-outline-light btn-lg">Explorar Menú</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-5">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Interior Cafetería" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="text-green mb-3">Nuestra Esencia</h2>
+                    <p class="text-muted">En The Daily Grind, creemos que una taza de café es más que una bebida; es un ritual. Fundada en 2023, nuestra misión es ofrecerte un espacio tranquilo donde el aroma del grano recién tostado inspire tus mejores ideas.</p>
+                    <p>Usamos granos de comercio justo y repostería horneada cada mañana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-green">Favoritos del Barista</h2>
+                <p class="text-muted">Una selección de lo que más aman nuestros clientes.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Latte Art">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-green">Caramel Latte</h5>
+                            <p class="card-text text-muted small">Espresso suave con leche vaporizada y un toque de caramelo artesanal.</p>
+                            <span class="badge bg-green p-2">$4.50</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <img src="https://tofuu.getjusto.com/orioneat-local/resized2/RAXztuAGa4DHXLueN-2400-x.webp" class="card-img-top" alt="Croissant">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-green">Croissant de Almendra</h5>
+                            <p class="card-text text-muted small">Hojaldre crujiente relleno de crema de almendras y cubierto de láminas tostadas.</p>
+                            <span class="badge bg-green p-2">$3.80</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Iced Coffee">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-green">Cold Brew Nitro</h5>
+                            <p class="card-text text-muted small">Café extraído en frío durante 12 horas, servido con nitrógeno para una textura cremosa.</p>
+                            <span class="badge bg-green p-2">$5.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center text-green mb-4">Galería</h2>
+            <div id="cafeCarousel" class="carousel slide rounded overflow-hidden shadow" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=500&q=80" class="d-block w-100" alt="Ambiente 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=500&q=80" class="d-block w-100" alt="Ambiente 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=500&q=80" class="d-block w-100" alt="Ambiente 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#cafeCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cafeCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-green text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="text-center mb-4">
+                        <h2>Reserva tu Mesa</h2>
+                        <p>Déjanos tus datos y te confirmaremos a la brevedad.</p>
+                    </div>
+                    <form id="reservationForm" class="bg-white p-4 rounded text-dark shadow">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="date" class="form-label">Fecha</label>
+                                <input type="date" class="form-control" id="date" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="guests" class="form-label">Personas</label>
+                                <select class="form-select" id="guests">
+                                    <option value="1">1 Persona</option>
+                                    <option value="2">2 Personas</option>
+                                    <option value="4">4 Personas</option>
+                                    <option value="more">+5 Personas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-green w-100">Confirmar Reserva</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 The Daily Grind. Todos los derechos reservados.</p>
+            <small>Av. Providencia 1234, Santiago | +56 9 1234 5678</small>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-green text-white">
+                    <h5 class="modal-title">¡Reserva Exitosa!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="lead">Gracias por elegir The Daily Grind.</p>
+                    <p>Hemos recibido tu solicitud. Te enviaremos un correo de confirmación pronto.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

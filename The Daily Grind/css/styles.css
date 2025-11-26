@@ -1,0 +1,58 @@
+:root {
+    --primary-green: #2c4f3e; /* Verde oscuro */
+    --light-cream: #f9f7f2;   /* Crema suave */
+    --accent-gold: #c5a065;   /* Dorado/Marrón suave */
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    background-color: var(--light-cream);
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+}
+
+/* Navbar */
+.bg-cream {
+    background-color: var(--light-cream) !important;
+}
+
+.text-green {
+    color: var(--primary-green) !important;
+}
+
+.btn-green {
+    background-color: var(--primary-green);
+    color: white;
+    border: 1px solid var(--primary-green);
+}
+
+.btn-green:hover {
+    background-color: #1e362a;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    /* Imagen de fondo genérica de café oscuro */
+    background: linear-gradient(rgba(44, 79, 62, 0.7), rgba(44, 79, 62, 0.5)), 
+                url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Ocupa el 80% de la altura de la pantalla */
+}
+
+/* Utilidades adicionales */
+.bg-green {
+    background-color: var(--primary-green) !important;
+}
+
+.hover-card {
+    transition: transform 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+}
