@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Propinas Modular</title>
+    <!-- Incluimos Tailwind CSS para estilos mínimos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados para centrar y estilizar la página */
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f7f9fb;
+        }
+        .card {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 10px 0 rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card p-8 bg-white rounded-xl max-w-sm w-full text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">🧮 Calculadora de Propinas</h1>
+        <p class="text-gray-600 mb-6">
+            Abre la consola de desarrollo (F12 o Ctrl+Shift+I) para ver los resultados después de ingresar los valores.
+        </p>
+        <button id="iniciarCalculo" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-200">
+            Iniciar Cálculo
+        </button>
+    </div>
+
+    <script>
+        // --- 1. Creación de la Función de Cálculo ---
+
+        /**
+         * Función que calcula el monto de la propina basado en el total de la cuenta
+         * y el porcentaje deseado.
+         * @param {number} montoCuenta - El monto total de la cuenta.
+         * @param {number} porcentajePropina - El porcentaje de propina a aplicar (ej: 15 para 15%).
+         * @returns {number} El monto exacto de la propina.
+         */
+        function calcularPropina(montoCuenta, porcentajePropina) {
+            // El porcentaje se convierte a decimal (ej: 15 / 100 = 0.15)
+            const montoPropinaCalculado = montoCuenta * (porcentajePropina / 100);
+            return montoPropinaCalculado;
+        }
+
+        function iniciarCalculadora() {
+            // --- 2. Captura de Datos del Usuario ---
+            
+            // Solicitamos el monto de la cuenta
+            let montoCuentaStr = prompt("Ingrese el monto total de la cuenta (ej: 1500):");
+            // Convertimos la entrada a un número flotante
+            const montoCuenta = parseFloat(montoCuentaStr);
+
+            // Solicitamos el porcentaje de propina
+            let porcentajePropinaStr = prompt("Ingrese el porcentaje de propina deseado (ej: 15):");
+            // Convertimos la entrada a un número flotante
+            const porcentajePropina = parseFloat(porcentajePropinaStr);
+
+            // Verificación básica de que las entradas sean números válidos
+            if (isNaN(montoCuenta) || isNaN(porcentajePropina) || montoCuenta <= 0 || porcentajePropina < 0) {
+                console.error("⛔ Error: Por favor, ingrese valores numéricos válidos y positivos para la cuenta y la propina.");
+                // Usamos un modal o mensaje personalizado en lugar de alert()
+                document.querySelector('.card p').textContent = "⛔ Error: Ingrese valores numéricos válidos. Revise la consola para más detalles.";
+                document.querySelector('.card p').classList.add('text-red-600');
+                return; // Salir de la función si los datos son inválidos
+            }
+
+            // --- 3. Invocación y Almacenamiento ---
+            
+            // Llamamos a la función modular, pasando los valores como argumentos
+            const montoPropina = calcularPropina(montoCuenta, porcentajePropina);
+
+            // --- 4. Presentación de Resultados ---
+
+            // Calculamos el monto total a pagar
+            const totalPagar = montoCuenta + montoPropina;
+
+            // Formateamos los números para una mejor presentación (opcional)
+            const formatter = new Intl.NumberFormat('es-CL', {
+                style: 'currency',
+                currency: 'CLP', // Usamos CLP (peso chileno) como ejemplo de moneda local, puedes cambiar a USD, EUR, etc.
+                minimumFractionDigits: 2,
+            });
+
+            // Mostramos el resumen en la consola
+            console.log("\n" + "=".repeat(40));
+            console.log("--- Resumen de la Cuenta ---");
+            console.log("=".repeat(40));
+            console.log(`Monto de la cuenta: ${formatter.format(montoCuenta)}`);
+            console.log(`Porcentaje de Propina: ${porcentajePropina.toFixed(2)}%`);
+            console.log(`Propina Calculada: ${formatter.format(montoPropina)}`);
+            console.log(`Total a pagar: ${formatter.format(totalPagar)}`);
+            console.log("=".repeat(40) + "\n");
+            
+            // Mensaje de éxito en la interfaz
+            document.querySelector('.card p').textContent = `Cálculo completado! Revisa la consola para ver el resumen detallado de ${formatter.format(totalPagar)}.`;
+            document.querySelector('.card p').classList.remove('text-red-600');
+        }
+
+        // Event listener para iniciar el proceso cuando el usuario hace clic en el botón
+        document.getElementById('iniciarCalculo').addEventListener('click', iniciarCalculadora);
+    </script>
+</body>
+</html>
