@@ -1,0 +1,46 @@
+
+body {
+    background-color: #f8f9fa; 
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.display-4 {
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+:root {
+    --bs-primary: #28a745; 
+    --bs-secondary: #6c757d;
+}
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+.custom-button {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    transition: background-color 0.3s ease;
+}
+.custom-button:hover {
+    background-color: #1e7e34; 
+    border-color: #1e7e34;
+}
+.custom-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover; 
+}
+.custom-input {
+    border-radius: 50px;
+}
+.card-body .btn {
+    border-radius: 50px;
+}
